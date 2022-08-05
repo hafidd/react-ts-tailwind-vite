@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import "./App.css";
+import { useEffect, useState } from "react";
+import Example from "./components/Example";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,8 +9,8 @@ function App() {
   }, []);
 
   return (
-    <div className="flex h-screen  w-full items-center justify-center">
-      <div className="border rounded-lg h-fit p-20 bg-slate-50">
+    <div className="flex h-screen  w-full items-center justify-center flex-wrap">
+      <div className="border rounded-lg h-fit p-20 bg-slate-50 mr-2">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -19,6 +18,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <Example />
     </div>
   );
 }
