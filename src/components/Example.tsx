@@ -5,7 +5,7 @@ export default function Example() {
   const [tags, setTags] = useState(["React", "Tailwind", "TypeScript", "Vite"]);
 
   const addTag = () => {
-    if (tags.find((t) => tag == t)) return;
+    if (tag.trim() === "" || tags.find((t) => tag == t)) return;
     setTags((tags) => [...tags, tag]);
     setTag("");
   };
